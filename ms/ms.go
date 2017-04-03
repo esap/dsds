@@ -21,7 +21,7 @@ type (
 func (db *MasterSlaveDbSet) GetDb(desc interface{}) (*sqlx.DB, error) {
 	r, ok := desc.(ReadOnlyer)
 
-	if ok || r.IsReadOnly() {
+	if ok && r.IsReadOnly() {
 		return db.Slave.GetDb(desc)
 	}
 
