@@ -1,4 +1,4 @@
-package dsds
+package ms
 
 import (
 	"github.com/it512/dsds"

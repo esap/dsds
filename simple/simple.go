@@ -1,4 +1,4 @@
-package dsds
+package simple
 
 import "github.com/jmoiron/sqlx"
 
