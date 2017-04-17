@@ -8,7 +8,8 @@ type (
 	}
 )
 
-func MustGetDb(db *sqlx.DB, e error) *sqlx.DB {
+func MustGetDb(dbm *DbManager, i interface{}) *sqlx.DB {
+	db, e := dbm.GetDb(i)
 	if e != nil {
 		panic(e)
 	}
