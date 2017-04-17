@@ -15,3 +15,10 @@ func MustGetDb(dbm *DbManager, i interface{}) *sqlx.DB {
 	}
 	return db
 }
+
+func Must(db *sqlx.DB, e error) *sqlx.DB {
+	if e != nil {
+		panic(e)
+	}
+	return db
+}
