@@ -14,7 +14,7 @@ type (
 type (
 	MasterSlaveDbSet struct {
 		Master *sqlx.DB
-		Slave  dsds.DbSet
+		Slave  dsds.DbManager
 	}
 )
 
